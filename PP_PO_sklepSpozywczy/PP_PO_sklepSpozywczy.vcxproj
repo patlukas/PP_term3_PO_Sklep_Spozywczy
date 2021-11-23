@@ -142,11 +142,13 @@
   <ItemGroup>
     <ClCompile Include="MainProduct.cpp" />
     <ClCompile Include="PP_PO_sklepSpozywczy.cpp" />
-    <ClCompile Include="ProduktDoJedzenia.cpp" />
+    <ClCompile Include="ProductToDrink.cpp" />
+    <ClCompile Include="ProductToEat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainProduct.h" />
-    <ClInclude Include="ProduktDoJedzenia.h" />
+    <ClInclude Include="ProductToDrink.h" />
+    <ClInclude Include="ProductToEat.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

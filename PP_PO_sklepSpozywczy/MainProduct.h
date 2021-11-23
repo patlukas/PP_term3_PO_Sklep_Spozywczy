@@ -6,19 +6,21 @@
 using namespace std;
 
 class MainProduct {
-public:
-	//int idProduct;
 	float price;
 	int numberOfProducts;
 	string name;
 	vector<MainProduct*> *listAllProducts;
 
+protected:
+	void updateMainData();
+	void readMainData();
+
 public:
-	MainProduct();
+	MainProduct() {};
 	MainProduct(vector<MainProduct*>*, string);
 	virtual void update() {};
+	virtual void read() {};
 	void deleteProduct();
-	//~MainProduct() { ; };
-	//void deleteProduct();
+	
 };
 
