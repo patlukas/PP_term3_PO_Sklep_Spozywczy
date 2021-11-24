@@ -3,10 +3,11 @@
 ProductToEat::ProductToEat(vector<MainProduct*>* listAllProducts)
 	: MainProduct{ listAllProducts, "Jedzenie" }
 {
-	cout << "\t Waga produktu: ";
-	cin >> this->productWeight;
+	cout << "\t Waga produktu w gramach: ";
+	this->productWeight = this->cinIntValue();
+
 	cout << "\t Czy produkt zawiera gluten (0-Nie, 1-Tak): ";
-	cin >> this->containsGluten;
+	this->containsGluten = this->cinBoolValue();
 }
 
 void ProductToEat::update() {
@@ -14,21 +15,16 @@ void ProductToEat::update() {
 
 	string str;
 
-	cout << "\t Waga produktu: ";
-	getline(cin, str);
-	if (str != "") this->productWeight = stoi(str);
+	cout << "\t Waga produktu w gramach (" << this->productWeight << "): ";
+	this->productWeight = this->cinIntValue(true, this->productWeight);
 
-	cout << "\t Czy produkt zawiera gluten (0-Nie, 1-Tak): ";
-	getline(cin, str);
-	if (str != "") {
-		if(str == "1") this->containsGluten = true;
-		else if(str == "0") this->containsGluten = false;
-	}
+	cout << "\t Czy produkt zawiera gluten (0-Nie, 1-Tak) (" << this->containsGluten << "): ";
+	this->containsGluten = this->cinBoolValue(true, this->containsGluten);
 }
 
 void ProductToEat::read() {
 	this->readMainData();
-	cout << "\tWaga: " << this->productWeight << " gram" << endl;;
+	cout << "\tWaga: " << this->productWeight << "g" << endl;;
 
 	if (this->containsGluten) cout << "\tProdukt zawiera gluten" << endl;
 	else cout << "\tProdukt NIE zawiera glutenu" << endl;

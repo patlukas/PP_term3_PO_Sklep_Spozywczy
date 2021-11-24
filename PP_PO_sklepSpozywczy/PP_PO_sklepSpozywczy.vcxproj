@@ -142,11 +142,13 @@
   <ItemGroup>
     <ClCompile Include="MainProduct.cpp" />
     <ClCompile Include="PP_PO_sklepSpozywczy.cpp" />
+    <ClCompile Include="ProductManagement.cpp" />
     <ClCompile Include="ProductToDrink.cpp" />
     <ClCompile Include="ProductToEat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainProduct.h" />
+    <ClInclude Include="ProductManagement.h" />
     <ClInclude Include="ProductToDrink.h" />
     <ClInclude Include="ProductToEat.h" />
   </ItemGroup>

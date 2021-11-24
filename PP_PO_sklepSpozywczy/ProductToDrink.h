@@ -1,5 +1,5 @@
 #pragma once
-#include "MainProduct.h";
+#include "MainProduct.h"
 #include <iostream>
 #include <string>
 
@@ -10,7 +10,7 @@ class ProductToDrink : public MainProduct {
 	bool returnableBottle;
 
 public:
-	ProductToDrink() {};
+	ProductToDrink() { ; };
 	ProductToDrink(vector<MainProduct*>*);
 	void update();
 	void read();

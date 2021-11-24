@@ -3,10 +3,10 @@
 ProductToDrink::ProductToDrink(vector<MainProduct*>* listAllProducts)
 	: MainProduct{ listAllProducts, "Picie" }
 {
-	cout << "\t Pojemnoœæ butelki: ";
-	cin >> this->bottleCapacity;
+	cout << "\t Pojemnoœæ butelki w mililitrach: ";
+	this->bottleCapacity = this->cinIntValue();
 	cout << "\t Czy butelka jest zwrotna (0-Nie, 1-Tak): ";
-	cin >> this->returnableBottle;
+	this->returnableBottle = this->cinBoolValue();
 }
 
 void ProductToDrink::update() {
@@ -14,16 +14,11 @@ void ProductToDrink::update() {
 
 	string str;
 
-	cout << "\t Pojemnoœæ butelki: ";
-	getline(cin, str);
-	if (str != "") this->bottleCapacity = stoi(str);
+	cout << "\t Pojemnoœæ butelki w mililitrach (" << this->bottleCapacity << "): ";
+	this->bottleCapacity = this->cinIntValue(true, this->bottleCapacity);
 
-	cout << "\t Czy butelka jest zwrotna (0-Nie, 1-Tak): ";
-	getline(cin, str);
-	if (str != "") {
-		if (str == "1") this->returnableBottle = true;
-		else if (str == "0") this->returnableBottle = false;
-	}
+	cout << "\t Czy butelka jest zwrotna (0-Nie, 1-Tak) (" << this->returnableBottle << "): ";
+	this->returnableBottle = this->cinBoolValue(true, this->returnableBottle);
 }
 
 void ProductToDrink::read() {

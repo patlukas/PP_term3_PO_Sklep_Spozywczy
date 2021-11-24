@@ -2,12 +2,15 @@
 #include "MainProduct.h"
 #include "ProductToEat.h"
 #include "ProductToDrink.h"
+#include "ProductManagement.h"
 #include <vector>
 
 using namespace std;
 
 int main() {
     setlocale(LC_ALL, "polish");
+    ProductManagement();
+    return 0;
 
     vector<MainProduct*> list;
     list.push_back(new ProductToDrink(&list));
