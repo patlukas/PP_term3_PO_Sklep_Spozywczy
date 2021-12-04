@@ -16,32 +16,15 @@ void ProductManagement::showMenu() {
 	cout << "\t[0]\tZamkniêcie programu" << endl;
 
 	string chooseOption;
+	cin.clear();
 	cin >> chooseOption;
 	this->clearConsol();
-	switch (stoi(chooseOption)) {
-	case 1:
-		this->showDetailsProduct();
-		break;
-
-	case 2:
-		this->deleteProduct();
-		break;
-
-	case 3:
-		this->updateProduct();
-		break;
-
-	case 4:
-		this->createProduct();
-		break;
-
-	case 0:
-		return;
-
-	default:
-		this->showMenu();
-		
-	}
+	if (chooseOption == "1") this->showDetailsProduct();
+	else if (chooseOption == "2") this->deleteProduct();
+	else if (chooseOption == "3") this->updateProduct();
+	else if (chooseOption == "4") this->createProduct();
+	else if (chooseOption == "0") return;
+	else this->showMenu();
 }
 
 void ProductManagement::showDetailsProduct() {

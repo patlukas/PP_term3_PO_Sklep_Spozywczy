@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <vector>
 #include "MainProduct.h"
 #include "ProductToDrink.h"
@@ -14,10 +14,11 @@ class ProductManagement
 	void deleteProduct();
 	void updateProduct();
 	void createProduct();
+	void showMenu();
+	void showDetailsProduct();
 
 public:
 	ProductManagement();
-	void showMenu();
-	void showDetailsProduct();
+	
 };
 

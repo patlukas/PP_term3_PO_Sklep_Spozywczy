@@ -6,7 +6,7 @@ MainProduct::MainProduct(vector<MainProduct*> *listAllProducts, string nameKindP
 	this->listAllProducts = listAllProducts;
 	this->kindName = nameKindProduct;
 	cout << "Dodawanie produktu z kategorii \"" << nameKindProduct << "\"" << endl;
-	cout << "\t Nazwa produktu: ";
+	cout << "\t Nazwa produktu (bez polskich znaków): ";
 	this->name = this->cinStringValue();
 	cout << "\t Cena produktu: ";
 	this->price = this->cinFloatValue();
@@ -30,7 +30,7 @@ void MainProduct::updateMainData() {
 
 	cout << "Aktualizowanie danych produktu (kliknij tylko Enter aby zostawiæ poprzednie dane)"<< endl;
 
-	cout << "\t Nazwa produktu ("<<this->name<<"): ";
+	cout << "\t Nazwa produktu (bez polskich znaków) ("<<this->name<<"): ";
 	this->name = this->cinStringValue(true, this->name);
 
 	cout << "\t Cena produktu (" << this->price << "): ";
