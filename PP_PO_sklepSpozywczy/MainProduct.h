@@ -7,7 +7,6 @@ using namespace std;
 
 class MainProduct {
 	float price;
-	int numberOfProducts;
 	string kindName;
 	string name;
 	vector<MainProduct*> *listAllProducts;
@@ -23,6 +22,7 @@ protected:
 public:
 	MainProduct() {};
 	MainProduct(vector<MainProduct*>*, string);
+	int numberOfProducts;
 	virtual void update() {};
 	virtual void read() {};
 	void deleteProduct();
